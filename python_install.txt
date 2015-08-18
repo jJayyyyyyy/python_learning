@@ -1,0 +1,139 @@
+StevedeMacBook-Pro:~ steve$ brew install python3
+==> Installing dependencies for python3: xz, pkg-config, readline, sqlite
+==> Installing python3 dependency: xz
+==> Downloading https://homebrew.bintray.com/bottles/xz-5.2.1.yosemite.bottle.ta
+######################################################################## 100.0%
+==> Pouring xz-5.2.1.yosemite.bottle.tar.gz
+🍺  /usr/local/Cellar/xz/5.2.1: 59 files, 1.7M
+==> Installing python3 dependency: pkg-config
+==> Downloading https://homebrew.bintray.com/bottles/pkg-config-0.28.yosemite.b
+######################################################################## 100.0%
+==> Pouring pkg-config-0.28.yosemite.bottle.2.tar.gz
+🍺  /usr/local/Cellar/pkg-config/0.28: 10 files, 612K
+==> Installing python3 dependency: readline
+==> Downloading https://homebrew.bintray.com/bottles/readline-6.3.8.yosemite.bo
+######################################################################## 100.0%
+==> Pouring readline-6.3.8.yosemite.bottle.tar.gz
+==> Caveats
+This formula is keg-only, which means it was not symlinked into /usr/local.
+
+OS X provides the BSD libedit library, which shadows libreadline.
+In order to prevent conflicts when programs look for libreadline we are
+defaulting this GNU Readline installation to keg-only.
+
+
+
+Generally there are no consequences of this for you. If you build your
+own software and it requires this formula, you'll need to add to your
+build variables:
+
+    LDFLAGS:  -L/usr/local/opt/readline/lib
+    CPPFLAGS: -I/usr/local/opt/readline/include
+
+==> Summary
+🍺  /usr/local/Cellar/readline/6.3.8: 40 files, 2.1M
+==> Installing python3 dependency: sqlite
+==> Downloading https://homebrew.bintray.com/bottles/sqlite-3.8.11.yosemite.bot
+######################################################################## 100.0%
+==> Pouring sqlite-3.8.11.yosemite.bottle.tar.gz
+==> Caveats
+This formula is keg-only, which means it was not symlinked into /usr/local.
+
+OS X provides an older sqlite3.
+
+Generally there are no consequences of this for you. If you build your
+own software and it requires this formula, you'll need to add to your
+build variables:
+
+    LDFLAGS:  -L/usr/local/opt/sqlite/lib
+    CPPFLAGS: -I/usr/local/opt/sqlite/include
+
+==> Summary
+🍺  /usr/local/Cellar/sqlite/3.8.11: 9 files, 2.8M
+==> Installing python3 dependency: gdbm
+==> Downloading https://homebrew.bintray.com/bottles/gdbm-1.11.yosemite.bottle.
+######################################################################## 100.0%
+==> Pouring gdbm-1.11.yosemite.bottle.2.tar.gz
+🍺  /usr/local/Cellar/gdbm/1.11: 17 files, 532K
+==> Installing python3 dependency: openssl
+==> Downloading https://homebrew.bintray.com/bottles/openssl-1.0.2d_1.yosemite.
+######################################################################## 100.0%
+==> Pouring openssl-1.0.2d_1.yosemite.bottle.tar.gz
+==> Caveats
+A CA file has been bootstrapped using certificates from the system
+keychain. To add additional certificates, place .pem files in
+  /usr/local/etc/openssl/certs
+
+and run
+  /usr/local/opt/openssl/bin/c_rehash
+
+This formula is keg-only, which means it was not symlinked into /usr/local.
+
+Apple has deprecated use of OpenSSL in favor of its own TLS and crypto libraries
+
+Generally there are no consequences of this for you. If you build your
+own software and it requires this formula, you'll need to add to your
+build variables:
+
+    LDFLAGS:  -L/usr/local/opt/openssl/lib
+    CPPFLAGS: -I/usr/local/opt/openssl/include
+
+==> Summary
+🍺  /usr/local/Cellar/openssl/1.0.2d_1: 464 files, 18M
+==> Installing python3
+==> Downloading https://www.python.org/ftp/python/3.4.3/Python-3.4.3.tar.xz
+###                                                                        5.2%
+curl: (18) transfer closed with 13669157 bytes remaining to read
+Error: Failed to download resource "python3"
+Download failed: https://www.python.org/ftp/python/3.4.3/Python-3.4.3.tar.xz
+StevedeMacBook-Pro:~ steve$ brew install python3
+==> Downloading https://www.python.org/ftp/python/3.4.3/Python-3.4.3.tar.xz
+#########                                                                 13.8%
+curl: (56) SSLRead() return error -36
+Error: Failed to download resource "python3"
+Download failed: https://www.python.org/ftp/python/3.4.3/Python-3.4.3.tar.xz
+StevedeMacBook-Pro:~ steve$ brew install python3
+==> Downloading https://www.python.org/ftp/python/3.4.3/Python-3.4.3.tar.xz
+###########                                                               16.1%
+curl: (18) transfer closed with 12106956 bytes remaining to read
+Error: Failed to download resource "python3"
+Download failed: https://www.python.org/ftp/python/3.4.3/Python-3.4.3.tar.xz
+StevedeMacBook-Pro:~ steve$ brew install python3
+==> Downloading https://www.python.org/ftp/python/3.4.3/Python-3.4.3.tar.xz
+############                                                              17.1%
+curl: (18) transfer closed with 11961058 bytes remaining to read
+Error: Failed to download resource "python3"
+Download failed: https://www.python.org/ftp/python/3.4.3/Python-3.4.3.tar.xz
+StevedeMacBook-Pro:~ steve$ brew install python3
+==> Downloading https://www.python.org/ftp/python/3.4.3/Python-3.4.3.tar.xz
+######################################################################## 100.0%
+==> ./configure --prefix=/usr/local/Cellar/python3/3.4.3_2 --enable-ipv6 --data
+==> make
+==> make install PYTHONAPPSDIR=/usr/local/Cellar/python3/3.4.3_2
+==> make frameworkinstallextras PYTHONAPPSDIR=/usr/local/Cellar/python3/3.4.3_2
+==> Downloading https://pypi.python.org/packages/source/s/setuptools/setuptools
+######################################################################## 100.0%
+==> Downloading https://pypi.python.org/packages/source/p/pip/pip-7.1.0.tar.gz
+######################################################################## 100.0%
+==> Downloading https://pypi.python.org/packages/source/w/wheel/wheel-0.24.0.ta
+######################################################################## 100.0%
+==> Caveats
+Pip and setuptools have been installed. To update them
+  pip3 install --upgrade pip setuptools
+
+You can install Python packages with
+  pip3 install <package>
+
+They will install into the site-package directory
+  /usr/local/lib/python3.4/site-packages
+
+See: https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/Homebrew-and-Python.md
+
+.app bundles were installed.
+Run `brew linkapps python3` to symlink these to /Applications.
+==> /usr/local/Cellar/python3/3.4.3_2/bin/python3 -s setup.py --no-user-cfg ins
+==> /usr/local/Cellar/python3/3.4.3_2/bin/python3 -s setup.py --no-user-cfg ins
+==> /usr/local/Cellar/python3/3.4.3_2/bin/python3 -s setup.py --no-user-cfg ins
+==> Summary
+🍺  /usr/local/Cellar/python3/3.4.3_2: 5948 files, 98M, built in 8.7 minutes
+StevedeMacBook-Pro:~ steve$ 
