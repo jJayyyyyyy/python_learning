@@ -1,0 +1,79 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <title></title>
+<style id="system" type="text/css">h1,h2,h3,h4,h5,h6,p,blockquote {    margin: 0;    padding: 0;}body {    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;    font-size: 13px;    line-height: 18px;    color: #737373;    margin: 10px 13px 10px 13px;}a {    color: #0069d6;}a:hover {    color: #0050a3;    text-decoration: none;}a img {    border: none;}p {    margin-bottom: 9px;}h1,h2,h3,h4,h5,h6 {    color: #404040;    line-height: 36px;}h1 {    margin-bottom: 18px;    font-size: 30px;}h2 {    font-size: 24px;}h3 {    font-size: 18px;}h4 {    font-size: 16px;}h5 {    font-size: 14px;}h6 {    font-size: 13px;}hr {    margin: 0 0 19px;    border: 0;    border-bottom: 1px solid #ccc;}blockquote {    padding: 13px 13px 21px 15px;    margin-bottom: 18px;    font-family:georgia,serif;    font-style: italic;}blockquote:before {    content:"C";    font-size:40px;    margin-left:-10px;    font-family:georgia,serif;    color:#eee;}blockquote p {    font-size: 14px;    font-weight: 300;    line-height: 18px;    margin-bottom: 0;    font-style: italic;}code, pre {    font-family: Monaco, Andale Mono, Courier New, monospace;}code {    background-color: #fee9cc;    color: rgba(0, 0, 0, 0.75);    padding: 1px 3px;    font-size: 12px;    -webkit-border-radius: 3px;    -moz-border-radius: 3px;    border-radius: 3px;}pre {    display: block;    padding: 14px;    margin: 0 0 18px;    line-height: 16px;    font-size: 11px;    border: 1px solid #d9d9d9;    white-space: pre-wrap;    word-wrap: break-word;}pre code {    background-color: #fff;    color:#737373;    font-size: 11px;    padding: 0;}@media screen and (min-width: 768px) {    body {        width: 748px;        margin:10px auto;    }}</style><style id="custom" type="text/css"></style><style type="text/css"></style></head>
+<body marginheight="0"><h2>工业项目设计学习第一步，熟悉开发工具</h2>
+<p><a href="http://bbs.qter.org/">Qt学习论坛</a>，东西多，但也杂<br><a href="http://www.cnblogs.com/emouse/category/449213.html">emouse的博客</a>，以前学习STM32开发环境搭建时也是参考这位博主的
+
+</p>
+<p>更多详细的步骤在上面都能找到，今天先不写，等明天把硬件设备全领了，然后向老师和师兄明确需求了再写。  
+
+</p>
+<h3>这里补充点其他的</h3>
+<h2>在Terminal中直接输入命令就能打开QtCreator， i.e.</h2>
+<pre><code class="lang-bash">~$ qtcreator</code></pre>
+<p>就可以打开<code>Qt Creator</code>了。
+
+</p>
+<p>想完成这个功能的原因是，一般在Linux下打命令比较方便，而师兄给下来的这个环境(已经打包成虚拟机，配置好了开发环境)，需要自己找到那个目录，一开始费了我好大劲才找到。。
+
+</p>
+<p>如果可以像进入python的交互环境一样，直接不管在哪个目录只要来个
+</p>
+<pre><code class="lang-bash">~$ python</code></pre>
+<p>那多省事~
+
+</p>
+<p>OK废话少说。
+
+</p>
+<h2>步骤：</h2>
+<h3>1.在Terminal下直接输入命令就能打开QtCreator</h3>
+<ul>
+<li><p>qtcreator所在原始目录是<br><code>/usr/local/QtCreator-2.8.1/bin/</code>  </p>
+</li>
+<li><p>首先在<code>/usr/bin/</code>目录下创建一个启动脚本<code>qtcreator</code>  </p>
+<pre><code class="lang-bash">~$ sudo vi /usr/bin/qtcreator</code></pre>
+</li>
+<li>里面的内容  <pre><code class="lang-shell">#!/bin/sh
+export QT_HOME=/usr/local/QtCreator-2.8.1/bin/
+$QT_HOME/qtcreator $*</code></pre>
+第一行是一个特殊的注释，和.py文件开头加个<code>#!/usr/bin/env python3</code>一样的作用。第2行是添加原始路径，第三行添加启动程序。<br>然后给它执行权限<pre><code class="lang-bash">/usr/bin$ sudo chmod a+x qtcreator</code></pre>
+然后在terminal敲个<code>qtc</code>，再tab一下，就能出现qtcreator了，第一步完成</li>
+</ul>
+<h3>2.添加桌面快捷方式</h3>
+<p>如果还想添加桌面快捷方式，也不难。  
+
+</p>
+<ul>
+<li><p>进入<code>/usr/share/applications/</code>，然后新建一个<code>qtcreator.desktop</code></p>
+<pre><code class="lang-bash">~$ sudo vi /usr/share/applications/</code></pre>
+</li>
+<li><p>进入编辑模式，写入以下内容，然后保存退出  </p>
+<pre><code class="lang-bash">[Desktop Entry]
+Type=Application
+Name=qtcreator
+Comment=QtCreator
+Exec=/usr/local/QtCreator-2.8.1/bin/qtcreator
+Terminal=false
+Categories=Development;IDE;C++;</code></pre>
+</li>
+<li><p>完成之后会在<code>/usr/share/applications/</code>目录下生成一个<code>qtcreator</code>，右键把它<code>Copy to</code> <code>Desktop</code>就好了~</p>
+</li>
+</ul>
+<p><br><br>
+
+</p>
+<p>我不会说我刚刚发现原来是有一个快捷方式的，而且有图标0.0不像我这个辣么丑。。不过自己动手做一做也不错~
+
+</p>
+<p><br><br><br><br>
+</p>
+<h2>参考</h2>
+<p>参考中是对Eclipse进行设置，Qt可以进行类似配置<br><a href="http://www.cnblogs.com/lanxuezaipiao/p/3325628.html">参考1：在Terminal下直接输入命令就能打开QtCreator</a><br><a href="http://www.2cto.com/os/201504/389987.html">参考2：添加桌面快捷方式</a>  
+
+
+<br/><br/>
+</p>
+<p>MarkDown provided By <a href="http://mahua.jser.me">MaHua</a></p>
+</body></html>
