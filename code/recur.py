@@ -20,7 +20,28 @@ print(fact(3))
 #使递归本身无论调用多少次，都只占用一个栈帧，不会出现栈溢出的情况。
 def fact_pro(n):
 	return fact_iter(n, 1)
-def fact_iter(num, product):
+def fact_iter(num, result):
 	if num==1:
-		return product
-	return fact_iter(num-1, num*product)
+		return result
+	return fact_iter(num-1, num*result)
+print(fact_pro(5))
+#知头知尾，就像循环
+#比如 5!=5x4x3x2x1, 5要给定，1也要知道
+
+#Haoni Tower汉诺塔
+#参数说明: 从a借助b移动到c
+def move(n, a, b, c):
+	
+	if n==1:
+		print(a, '-->', c)
+		return
+	move(n-1, a, c, b)
+	move(1, a, b, c)
+	move(n-1, b, a, c)
+move(3, 'A', 'B', 'C')
+#算法：
+#1: 若只有一个盘子，把它从a到c，写成print(a, '-->', c)
+#2: 多个盘子，先把它上面的n-1个从a(起点)移动到b(中介)，然后把最后一个移动到c(终点)，然后把B的n-1个移动到c。
+
+
+
