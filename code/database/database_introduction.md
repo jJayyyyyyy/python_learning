@@ -7,20 +7,20 @@
 * 你可以用一个文本文件保存，一行保存一个学生，用,隔开</br>
 
  ```
-  Michael,97</br>
-  Bob,85</br>
-  Bart,59</br>
-  Lisa,87</br>
+  Michael,97
+  Bob,85
+  Bart,59
+  Lisa,87
  ```
 
 * 你还可以用JSON格式保存，也是文本文件 
 
  ```JSON
 	[
-		"name":"Michael","score":99},</br>
-    	{"name":"Bob","score":85},</br>
-    	{"name":"Bart","score":59},</br>
-    	{"name":"Lisa","score":87}</br>
+		{"name":"Michael","score":99},
+    	{"name":"Bob","score":85},
+    	{"name":"Bart","score":59},
+    	{"name":"Lisa","score":87}
 	]
  ```
  
@@ -45,7 +45,8 @@
 也就是Grade表的每一行对应Class表的多行，在关系数据库中，这种基于`表`（Table）的`一对多的关系`就是关系数据库的基础。 
 
 * 根据某个年级的ID就可以查找所有班级的行，这种查询语句在关系数据库中称为SQL语句，可以写成：
-`SELECT * FROM classes WHERE grade_id = '1';`
+
+ `SELECT * FROM classes WHERE grade_id = '1';`
 
 * 结果也是一个表：
 
