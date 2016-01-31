@@ -34,7 +34,7 @@
 本章我们会详细讨论Python Web开发技术。
 
 <br/><br/>
-> 本文档只为学习github/python/markdown所用，原文链接地址如下
+> 本文档只为学习python/git/github/markdown所用，原文链接地址如下
 > 
 > [廖老师的教程地址](http://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000/0014320118765877e93ecea4e6449acb157e9efae8b40b6000#0)
 
