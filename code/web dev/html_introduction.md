@@ -1,3 +1,5 @@
+**[参考教程](http://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000/0014320122322996f770fbf5da84ead84a1731e1dde129f000)**
+
 ### HTML
 
 * 一个简单的例子
@@ -38,3 +40,16 @@
 	</body>
 	</html>
 ```
+
+## 小结
+* 如果要学习Web开发，首先要对HTML、CSS和JavaScript作一定的了解。
+
+* HTML定义了页面的内容，CSS来控制页面元素的样式，而JavaScript负责页面的交互逻辑。
+
+* 当我们用Python或者其他语言开发Web应用时，我们就是要在服务器端动态创建出HTML，这样，浏览器就会向不同的用户显示出不同的Web页面。
+
+* 在线学习网站w3schools
+[http://www.w3schools.com/](http://www.w3schools.com/)
+
+ 以及一个对应的中文版本：
+[http://www.w3school.com.cn/](http://www.w3school.com.cn/)
