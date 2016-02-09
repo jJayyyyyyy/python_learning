@@ -26,11 +26,11 @@
 	<head>
 		<title>Hello</title>
 		<style>
-			h1 {
+			h1{
 				color: #333333;
 				font-size: 48px;
 				text-shadow: 3px 3px 3px #666666;
-				}
+			}
 		</style>
 	</head>
 	<body>
